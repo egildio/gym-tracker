@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>GymTracker - PPL</title>
-  <script type="module" crossorigin src="./assets/index-CZHT9VvT.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Dzck3W97.css">
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
   <div id="app">
@@ -64,11 +63,15 @@
 
     <div class="timer-modal" id="timerModal" style="display:none;">
       <div class="timer-content">
+        <div class="timer-avatar" id="timerAvatar">🏋️</div>
+        <div class="timer-exercise" id="timerCurrentEx"><strong>NOW:</strong> Bench Press</div>
+        <div class="timer-next" id="timerNextEx"><strong>NEXT:</strong> Incline Press</div>
         <h2>REST TIME</h2>
         <div class="timer-display" id="timerDisplay">90</div>
-        <button id="skipTimer" class="btn">SKIP</button>
+        <button id="skipTimer" class="btn btn-skip">SKIP</button>
       </div>
     </div>
   </div>
+  <script type="module" src="./assets/index-Czn4ysAi.js"></script>
 </body>
 </html>
