@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>GymTracker - PPL</title>
+  <script type="module" crossorigin src="/assets/index-CZHT9VvT.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dzck3W97.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>🏋️ GYM TRACKER</h1>
+      <div class="day-selector">
+        <button class="day-btn active" data-day="1">Day 1<br><small>Push</small></button>
+        <button class="day-btn" data-day="2">Day 2<br><small>Pull</small></button>
+        <button class="day-btn" data-day="3">Day 3<br><small>Legs</small></button>
+        <button class="day-btn" data-day="4">Day 4<br><small>Push</small></button>
+        <button class="day-btn" data-day="5">Day 5<br><small>Pull</small></button>
+      </div>
+    </header>
+
+    <div class="sergeant-bar" id="sergeantBar" style="display:none;">
+      <div class="sergeant-msg" id="sergeantMsg">DRILL SERGEANT ACTIVE!</div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="workout">Workout</button>
+      <button class="tab-btn" data-tab="progress">Progress</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
+    </div>
+
+    <main id="workoutTab" class="tab-content active">
+      <div class="workout-header">
+        <h2 id="workoutTitle">Day 1: Push</h2>
+        <div class="timer-controls">
+          <button id="startTimerBtn" class="btn btn-timer">⏱️ Rest Timer</button>
+          <button id="toggleSergeant" class="btn btn-sergeant">🎖️ Sergeant OFF</button>
+        </div>
+      </div>
+      <div class="exercises-list" id="exercisesList"></div>
+      <button id="completeWorkout" class="btn btn-complete">✅ COMPLETE WORKOUT</button>
+    </main>
+
+    <main id="progressTab" class="tab-content">
+      <h2>📊 Progress</h2>
+      <div id="progressList"></div>
+    </main>
+
+    <main id="settingsTab" class="tab-content">
+      <h2>⚙️ Settings</h2>
+      <div class="setting-item">
+        <label>Rest Timer (seconds)</label>
+        <input type="number" id="restTime" value="90" min="30" max="300">
+      </div>
+      <div class="setting-item">
+        <label>Drill Sergeant</label>
+        <button id="sergeantToggle" class="btn">🎖️ OFF</button>
+      </div>
+      <div class="setting-item">
+        <button id="clearData" class="btn btn-danger">🗑️ Clear All Data</button>
+      </div>
+    </main>
+
+    <div class="timer-modal" id="timerModal" style="display:none;">
+      <div class="timer-content">
+        <h2>REST TIME</h2>
+        <div class="timer-display" id="timerDisplay">90</div>
+        <button id="skipTimer" class="btn">SKIP</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
